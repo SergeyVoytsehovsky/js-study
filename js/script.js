@@ -11,3 +11,5 @@ let arr = [];
 console.log(arr);
 arr[0] = 10;
 console.log(arr);
+
+let films = {};
