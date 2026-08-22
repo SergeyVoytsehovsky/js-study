@@ -1,3 +1,4 @@
+//////    MAIN PROJECT    ///////
 "use strict";
 
 let numberOfFilms = +prompt("Скільки фільмів ви подивилися?", '');
@@ -37,9 +38,7 @@ console.log(personalMoviesDB);
 //////    MAIN PROJECT    ///////
 
 
-
-/////////////////////
-/////////////////////
+///////   second test task   //////////////
 
 function getMathResult(baseNum, count) {
 	let str = '';
@@ -60,8 +59,9 @@ function getMathResult(baseNum, count) {
 
 console.log(getMathResult(5, 3));
 
-//////////////////////
-//////////////////////
+//////   second test task      //////////
+
+//////   triangle with stars      ///////////////
 
 const lines = 7;
 let spaces = 6;
@@ -79,3 +79,5 @@ for (let i = 1; i < lines; i++) {
 	spaces = 6;
 };
 console.log(result);
+
+//////   triangle with stars    //////////////
