@@ -9,7 +9,7 @@ function start() {
 	}
 }
 
-// start();
+start();
 
 let personalMoviesDB = {
 	count: numberOfFilms,
@@ -21,17 +21,19 @@ let personalMoviesDB = {
 
 function rememberMyFilms() {
 	for (let i = 0; i < 2; i++) {
-		let a = prompt('Який фільм був останнім?', ''),
+		let a = prompt('Який фільм був останнім?', '').trim(),
 			b = +prompt('дайте оцінку', '');
 		if (a == null || b == null || a == '' || b == '' || a.length > 50) {
+			console.log('error');
 			i--;
 		} else {
 			personalMoviesDB.movies[a] = b;
+			console.log('done');
 		}
 	}
 }
 
-// rememberMyFilms();
+rememberMyFilms();
 
 function detectPersonalLevel() {
 	if (personalMoviesDB.count <= 10) {
@@ -48,7 +50,7 @@ function detectPersonalLevel() {
 	}
 }
 
-// detectPersonalLevel();
+detectPersonalLevel();
 
 function whriteMyGenres() {
 	for (let i = 1; i <= 3; i++) {
@@ -110,3 +112,55 @@ showMyDB(personalMoviesDB.privat);
 // console.log(result);
 
 //////   triangle with stars    //////////////
+
+// function getTimeFromMinutes(totalMinutes) {
+// 	if (!Number.isInteger(totalMinutes) || totalMinutes < 0) {
+// 		return "Ошибка, проверьте данные";
+// 	}
+
+// 	const hours = Math.floor(totalMinutes / 60),
+// 		  minutes = totalMinutes % 60;
+// 	let str;
+
+// 	switch (hours) {
+// 		case 1: str = 'час';
+// 			break;
+// 		case 2:
+// 		case 3:
+// 		case 4: 
+// 			str = 'часа';
+// 				break;
+// 		default: str = 'часов'; 
+// 	}
+
+// 	return str = `Это ${hours} ${str} и ${minutes} минут`
+// }
+// console.log(getTimeFromMinutes(159));
+
+// function findMaxNumber(a, b, c, d) {
+// 	if (typeof(a) !== 'number' ||
+// 		typeof(b) !== 'number' ||
+// 		typeof(c) !== 'number' ||
+// 		typeof(d) !== 'number' ||
+// 		arguments.length < 4) {
+// 			return 0;
+// 	} else {
+// 		return Math.max(a, b, c, d);
+// 	}
+// }
+// console.log(findMaxNumber(1, 4, 2, 5));
+
+
+function fib (number) {
+	let a = 0,
+		b = 1;
+	let str = '';
+	if (typeof(number) !== 'number' || number == 0) {
+		return str;
+	}
+	for (let i = 0; i < number; i++) {
+		str += `${i} `;
+	}	
+	return str;
+}
+console.log(fib(2));
